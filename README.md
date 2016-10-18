@@ -1,5 +1,10 @@
-== Test - Playing with Composer
+# Calculator
 
-* Add dependencies
+## Test Project - Playing with Composer + PHPUnit
+
+[![Build Status](https://travis-ci.org/eballo/composer-test.svg?branch=master)](https://travis-ci.org/eballo/composer-test)
+
+## Work Done
+* Add composer dependencies
 * Create a simple PHPUnit Test
-* Use this project to run in Jenkins
+* Add Travis Build check

@@ -61,7 +61,7 @@ class CalculatorTest extends TestCase {
                 
         $returnValue = $this->calculator->multiplication(2,2);
         
-        $this->assertEquals($returnValue,4);
+        $this->assertEquals($returnValue,6);
     }
     
     public function testMultiplicationNegative(){

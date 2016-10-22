@@ -39,6 +39,30 @@ class CalculatorTest extends TestCase {
         $this->assertNotEquals($returnValue,5);
     }
     
+    public function testAdditionLettersNegativeTwoWrongParameters(){
+        
+        $this->expectException(CalculatorException::class);
+        
+        $this->calculator->addition("a","b");
+        
+    }
+    public function testAdditionLettersNegativeWrongFirstParameter(){
+        
+        $this->expectException(CalculatorException::class);
+        
+        $this->calculator->addition("a",1);
+        
+    }
+    
+    public function testAdditionLettersNegativeWrongSecondParameter(){
+        
+        $this->expectException(CalculatorException::class);
+        
+        $this->calculator->addition(1,"b");
+        
+    }
+    
+    
     /* Test substraction */
     
     public function testSubstractionPositive(){
@@ -53,6 +77,30 @@ class CalculatorTest extends TestCase {
         $returnValue = $this->calculator->substraction(2,2);
         
         $this->assertNotEquals($returnValue,5);
+    }
+    
+    
+    public function testSubstractionLettersNegativeTwoWrongParameters(){
+        
+        $this->expectException(CalculatorException::class);
+        
+        $this->calculator->substraction("a","b");
+        
+    }
+    public function testSubstractionLettersNegativeWrongFirstParameter(){
+        
+        $this->expectException(CalculatorException::class);
+        
+        $this->calculator->substraction("a",1);
+        
+    }
+    
+    public function testSubstractionLettersNegativeWrongSecondParameter(){
+        
+        $this->expectException(CalculatorException::class);
+        
+        $this->calculator->substraction(1,"b");
+        
     }
     
     /* Test multiplication */
@@ -85,6 +133,17 @@ class CalculatorTest extends TestCase {
         $returnValue = $this->calculator->division(2,2);
         
         $this->assertNotEquals($returnValue,5);
+    }
+    
+    public function testDivisionByZero(){
+        
+        $this->expectException(CalculatorException::class);
+        $this->calculator->division(2,0);
+    }
+    
+    public function testDivisionEqualZero()
+    {
+        $this->assertEquals($this->calculator->division(0,2),0);
     }
     
 }

@@ -1,11 +1,15 @@
 <?php
 
+class CalculatorException extends Exception { }
 /**
  * Calculator class
  */
 class Calculator {
     
     public function addition($x, $y){
+        if (!is_numeric($x) || !is_numeric($y)) {
+            throw new CalculatorException('Only Numbers are allowed.');
+        }
         return $x + $y;
     }
     

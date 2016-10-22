@@ -46,6 +46,22 @@ class CalculatorTest extends TestCase {
         $this->calculator->addition("a","b");
         
     }
+    public function testAdditionLettersNegative2(){
+        
+        $this->expectException(CalculatorException::class);
+        
+        $this->calculator->addition("a",1);
+        
+    }
+    
+    public function testAdditionLettersNegative3(){
+        
+        $this->expectException(CalculatorException::class);
+        
+        $this->calculator->addition(1,"b");
+        
+    }
+    
     
     /* Test substraction */
     

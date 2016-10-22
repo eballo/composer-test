@@ -119,6 +119,14 @@ class CalculatorTest extends TestCase {
         $this->assertNotEquals($returnValue,5);
     }
     
+    public function testMultiplicationNegativeWrongParameter(){
+        
+        $this->expectException(CalculatorException::class);
+        
+        $this->calculator->multiplication("a",2);
+        
+    }
+    
     /* Test division */
     
     public function testDivisionPositive(){

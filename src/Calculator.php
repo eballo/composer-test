@@ -21,6 +21,9 @@ class Calculator {
     }
     
     public function multiplication($x, $y){
+        if (!is_numeric($x)) {
+            throw new CalculatorException('Only Numbers are allowed.');
+        }
         return $x * $y;
     }
     

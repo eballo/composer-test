@@ -1,4 +1,7 @@
 /vendor/
 /results/
 /nbproject/
+.buildpath
+.project
+.settings/
 composer.lock

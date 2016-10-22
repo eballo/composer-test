@@ -39,6 +39,14 @@ class CalculatorTest extends TestCase {
         $this->assertNotEquals($returnValue,5);
     }
     
+    public function testAdditionLettersNegative(){
+        
+        $this->expectException(CalculatorException::class);
+        
+        $this->calculator->addition("a","b");
+        
+    }
+    
     /* Test substraction */
     
     public function testSubstractionPositive(){

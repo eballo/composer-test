@@ -14,6 +14,9 @@ class Calculator {
     }
     
     public function substraction($x, $y){
+        if (!is_numeric($x) || !is_numeric($y)) {
+            throw new CalculatorException('Only Numbers are allowed.');
+        }
         return $x - $y;
     }
     

@@ -24,10 +24,10 @@ class Calculator {
     public function division($x, $y){
         
         if (!is_numeric($x) || !is_numeric($y)) {
-            throw new CalculatorException('Only Numbers are allowed.');
+            throw new CalculatorException('Only Numbers are allowedgit .');
         }else
         {
-            if ($x == 0 || $y == 0) {
+            if ($y == 0) {
                 throw new CalculatorException('No puedes dividir entre cero');
             }
         }

@@ -111,4 +111,10 @@ class CalculatorTest extends TestCase {
         $this->assertNotEquals($returnValue,5);
     }
     
+    public function testDivisionByZero(){
+        
+        $this->expectException(CalculatorException::class);
+        $this->calculator->division(0,2);
+    }
+    
 }

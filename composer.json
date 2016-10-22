@@ -17,6 +17,6 @@
         "psr-0":{"":"src/"}
     },
     "scripts": {
-        "test": "vendor/bin/phpunit --log-junit results/phpunit.xml"
+        "test": "phpunit"
     }
 }
